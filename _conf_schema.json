@@ -1,0 +1,38 @@
+{
+    "enabled": {
+        "description": "启用 TTS 情绪调整",
+        "type": "bool",
+        "default": true,
+        "hint": "关闭后完全不修改 GPT-SoVITS 参数。"
+    },
+    "use_reference_audio": {
+        "description": "切换参考音频",
+        "type": "bool",
+        "default": true,
+        "hint": "使用 normal1/normal2/asking/soft 四个参考音频匹配情绪。当前语音包只有这四种参考音频。"
+    },
+    "use_prosody": {
+        "description": "微调语速与采样参数",
+        "type": "bool",
+        "default": true,
+        "hint": "根据情绪调整 speed_factor、temperature、top_k、top_p。"
+    },
+    "use_user_context": {
+        "description": "结合用户消息判断情绪",
+        "type": "bool",
+        "default": true,
+        "hint": "当 bot 回复本身没有明显情绪词时，用用户消息的情绪作为补充；例如用户说“难过”，bot 只回“嗯”也会用柔和语气。"
+    },
+    "auto_text_language": {
+        "description": "自动识别文本语言",
+        "type": "bool",
+        "default": true,
+        "hint": "中文回复自动使用 text_lang=zh，日文使用 ja，英文使用 en；避免中文回复被日文音素读错。"
+    },
+    "post_process_speed": {
+        "description": "合成后调整语速",
+        "type": "bool",
+        "default": true,
+        "hint": "当前 9881 的 v2 API 会忽略 speed_factor，开启后用 ffmpeg atempo 在合成后实际改变语速。若你改用会生效的 API，可关闭此选项避免二次变速。"
+    }
+}

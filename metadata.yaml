@@ -1,0 +1,8 @@
+name: astrbot_plugin_tts_emotion
+display_name: TTS 情绪
+desc: 根据回复文本的情绪切换 GPT-SoVITS 参考音频并微调语速/温度，让 Luna 的 TTS 更有语气。
+version: v1.0.0
+author: Luna
+astrbot_version: ">=4.17.0"
+support_platforms:
+  - aiocqhttp
